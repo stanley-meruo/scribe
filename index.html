@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="/src/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
@@ -47,6 +47,21 @@
        background-position: top;
        content: '';
     }
+    @media (min-width: 640px) {
+        footer{
+           background-repeat: no-repeat;
+           background-size: calc(320%);
+           background-position: bottom;
+        }
+    }
+    @media (min-width: 786px) {
+        footer{
+           background-repeat: no-repeat;
+           background-size: cover;
+           background-position: center;
+        }
+    }
+
 </style>
 
 <body class="font-font-sora">
@@ -447,7 +462,7 @@
         </div>
 
         <div class="sm:flex sm:items-center sm:justify-center sm:gap-4 md:gap-6 md:mx-8 md:mt-12 lg:gap-12 lg:mx-32 lg:mt-16">
-            <div class="bg-footer-bg bg-no-repeat bg-cover bg-bottom border-[1px] rounded-xl px-6 py-8 mb-4 sm:w-2/5 md:p-20 md:bg-center">
+            <div class="bg-footer-bg bg-no-repeat bg-cover bg-bottom border-[1px] rounded-xl px-6 py-8 mb-4 sm:w-2/5 md:p-20 md:bg-bottom">
                 <p class="text-5xl font-extrabold bg-gradient-to-r from-blue-700 to-pink-700 inline-block text-transparent bg-clip-text pb-8 md:text-6xl lg:text-7xl">15x</p>
                 <div class="md:text-left md:-mx-10 md:-mb-10 md:pt-8 lg:mt-9">
                     <p class="font-semibold pb-2 md:font-semibold md:text-lg">Save time</p>
@@ -472,12 +487,13 @@
 
         <p class="text-2xl font-semibold mt-16 mb-4 pb-3 md:text-3xl md:font-bold md:mt-24 lg:text-4xl lg:font-extrabold lg:mt-28">Ready to try Scribe?</p>
         <p class="text-gray-500 mx-2 sm:mx-8 md:mx-24 md:text-lg lg:mx-60 lg:text-xl">Scribe automatically generates how-to guides and serves them to your team when they need them most. Save time, stay focused, help others.</p>
-        <button class="bg-gradient-to-t from-black to-blue-950 text-white rounded-full shadow-xl py-4 px-7 mx-auto my-16 md:my-24"><img src="/images/icon-chrome.png" alt="">
-            Get Scribe for Chrome
+        <button class="flex items-center justify-center gap-2 bg-gradient-to-t from-black to-blue-950 text-white rounded-full shadow-xl py-4 px-7 mx-auto my-16 md:my-24">
+            <img src="/images/icon-chrome.png" alt="">
+            <p>Get Scribe for Chrome</p>
         </button>
     </section>
         
-    <footer class="md:flex md:items-baseline">
+    <footer class="md:flex md:items-baseline md:flex-row-reverse">
 
         <div class="md:flex md:items-baseline md:gap-10">
             <div class="flex items-center gap-20 md:flex-none">
@@ -513,7 +529,6 @@
             <div>
         </div>
 
-        
         <div class="flex gap-6 md:flex-none">
             <div class="text-white">
                 <img src="/images/footer-logo.svg" alt="" class="my-8">
@@ -529,8 +544,7 @@
                     <img src="/images/icon-youtube.svg" alt="">
                 </div>
             </div>
-        </div>
-        
+        </div> 
 
     </footer>
 
