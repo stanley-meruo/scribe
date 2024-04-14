@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <title>Scribe | Step by Step Guide</title>
+</head>
+
+<style>
+    header {
+       padding-bottom: 200px;
+       background: rgb(2, 2, 255);
+       background-image: linear-gradient(to top right, rgb(23, 54, 255), rgba(96, 48, 240, 0.725), rgb(254, 121, 59)), url(/images/footer-bg.svg);
+       background-repeat: no-repeat;
+       background-size: calc(600%);
+       background-position: bottom;
+       content: '';
+    }
+    h1, h3, h4 {
+        text-shadow: 2px 2px 12px #353535;
+    }
+    @media (min-width: 640px) {
+        header{
+           background-repeat: no-repeat;
+           background-size: calc(320%);
+           background-position: bottom;
+        }
+    }
+    @media (min-width: 786px) {
+        header{
+           background-repeat: no-repeat;
+           background-size: cover;
+           background-position: center;
+        }
+    }
+
+    footer {
+       padding: 48px;
+       background: rgb(13, 13, 167);
+       background-image: linear-gradient(to top right, rgb(6, 39, 255), rgba(96, 48, 240, 0.725), rgb(254, 121, 59)), url(/images/footer-bg.svg);
+       background-repeat: no-repeat;
+       background-size: calc(410%);
+       background-position: top;
+       content: '';
+    }
+</style>
+
+<body class="font-font-sora">
+
+    <header>
+        <div class="fixed top-0 z-50 w-full flex items-center justify-between p-6 bg-slate-50 bg-opacity-[0.97] shadow-xl lg:px-16">
+            <img src="/images/nav-logo.svg" alt="" class="w-24">
+            <nav class="mx-auto hidden lg:block">
+                <ul class="flex items-center justify-center gap-8 lg:gap-16">
+                    <li class="list-none font-semibold"><a href="">Product</a></li>
+                    <li class="list-none font-semibold"><a href="">Solutions</a></li>
+                    <li class="list-none font-semibold"><a href="">Pricing</a></li>
+                    <li class="list-none font-semibold"><a href="">Resources</a></li>
+                    <li class="list-none font-semibold"><a href="">Enterprise</a></li>
+                    <li class="list-none font-semibold"><a href="">Company</a></li>
+                </ul>
+            </nav>
+            <div class="flex items-center gap-6">
+                <img src="/images/icon-hamburger.svg" alt="" class="lg:hidden">
+                <button class="font-semibold border-[1px] border-black rounded-full px-4 py-2 hidden lg:block">
+                    Sign in
+                </button>
+                <button class="font-semibold border-1 border-black rounded-full bg-gradient-to-b from-blue-700 to-blue-900 text-white shadow-2xl px-4 py-2 hidden lg:block">
+                    Get Started
+                </button>
+            </div>
+        </div>
+        <div class="text-white text-center pt-48">
+            <h1 class="text-4xl font-bold drop-shadow-xl leading-tight -my-2 sm:mx-16 md:mx-18 md:text-5xl lg:mx-48 xl:mx-96">Let your documentation do all the work for you.
+            <h3 class="text-lg mt-8 md:text-xl">Turn your proecess into a step-by-step guide, instantly.</h3>
+        </div>
+
+        <div class="mt-24 mx-16">
+            <h4 class="text-white text-center mb-10 md:text-lg">How will your team use Scribe?</h4>
+            <div class="grid grid-rows-3 grid-cols-2 gap-2 border-[1px] border-slate-400 rounded-3xl shadow-lg shadow-blue-900 px-3 py-3 bg-indigo-500 sm:mx-12 md:grid-rows-2 md:grid-cols-3 md:mx-12 lg:grid-rows-1 lg:grid-cols-6 lg:mx-24">
+                <div class="bg-white text-center text-black rounded-lg shadow-md py-3 hover:scale-105">
+                    <img src="/images/choice-icon-1.svg" alt="" class="m-auto pb-3">
+                    <p class="text-xs font-medium">Onboard new hires</p>
+                </div>
+                <div class="bg-white text-center text-black rounded-lg shadow-md py-3 hover:scale-105">
+                    <img src="/images/choice-icon-4.svg" alt="" class="m-auto pb-3">
+                    <p class="text-xs font-medium">Answer questions</p>
+                </div>
+                <div class="bg-white text-center text-black rounded-lg shadow-md py-3 hover:scale-105">
+                    <img src="/images/choice-icon-2.svg" alt="" class="m-auto pb-3">
+                    <p class="text-xs font-medium">Create SOPs</p>
+                </div>
+                <div class="bg-white text-center text-black rounded-lg shadow-md py-3 hover:scale-105">
+                    <img src="/images/choice-icon-5.svg" alt="" class="m-auto pb-3">
+                    <p class="text-xs font-medium">Assist customers</p>
+                </div>
+                <div class="bg-white text-center text-black rounded-lg shadow-md py-3 hover:scale-105">
+                    <img src="/images/choice-icon-3.svg" alt="" class="m-auto pb-3">
+                    <p class="text-xs font-medium">Build training docs</p>
+                </div>
+                <div class="bg-white text-center text-black rounded-lg shadow-md py-3 hover:scale-105">
+                    <img src="/images/choice-icon-6.svg" alt="" class="m-auto pb-3">
+                    <p class="text-xs font-medium">Something else</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid mt-16">
+            <button class="flex items-center justify-center gap-2 text-white border-[1px] border-b-blue-900 border-x-blue-500 rounded-full shadow-md shadow-blue-950 bg-blue-700 py-4 px-12 m-auto sm:px-6">
+                <img src="/images/icon-chrome-button.webp" alt="" class="w-5">
+                <p class="font-medium">Get Scribe Free</p>
+            </button>
+        </div>
+
+        <div class="flex items-center justify-center gap-4 border-[1px] border-x-blue-900 border-t-blue-900 border-b-blue-400 shadow-inner rounded-xl bg-gradient-to-t from-blue-800 to-blue-950 p-3 mx-6 my-8 sm:w-2/4 sm:mx-auto md:w-2/5 md:mx-auto lg:w-1/4 lg:mx-auto">
+            <img src="/images/icon-chrome-store.png" alt="" class="w-7">
+            <img src="/images/icon-5-stars.svg" alt="" class="w-24">
+            <p class="text-white">900,000+ installs</p>
+        </div>
+
+        <div class="flex justify-center gap-1 mt-24">
+            <p class="text-gray-200 font-light">Here's what a Scibe looks like</p>
+            <img src="/images/arrow-bend.svg" alt="arrow bend" class="mt-2" >
+        </div>
+    </header>
+
+    <section>
+        <div class="bg-gradient-to-t from-white via-gray-50 to-blue-400 border-[1px] border-b-white rounded-3xl mx-5 -mt-48 md:mx-24 lg:mx-64 ">
+            <div class="bg-gray-100 border-[1px] rounded-3xl m-4 px-6 py-12 overflow-y-scroll">
+                <img src="/images/Salesforce-Step-1.webp" alt="" class="mb-4">
+                <img src="/images/Salesforce-Step-2.webp" alt="" class="mb-2">
+                <img src="/images/Salesforce-Step-3.webp" alt="" class="mb-2">
+                <img src="/images/Salesforce-Step-4.webp" alt="" class="mb-2">
+                <img src="/images/Salesforce-Step-5.webp" alt="" class="">
+            </div>
+        </div>
+    </section>
+
+    <section class="text-center bg-white -mt-48 py-20">
+        <div class="relative pt-24 mx-12 md:mt-12 md:w-3/5 md:mx-auto lg:w-2/5 lg:mx-auto">
+            <p class="text-2xl font-extrabold md:text-3xl">Millions of teams are saving time with Scribe</p>
+        </div>
+        <div class="grid grid-rows-7 grid-cols-2 gap-2 place-items-center mt-20 mb-10 md:grid-rows-5 md:grid-cols-3 md:gap-1 md:mx-16 lg:grid-rows-3 lg:grid-cols-5 lg:gap-1 lg:mx-24">
+            <img src="/images/ibm.webp" alt="" class="w-32 m-2 md:w-36 md:m-2">
+            <img src="/images/intel.png" alt="" class="w-32 m-2 md:w-36 md:m-2">
+            <img src="/images/newyork.png" alt="" class="w-32 m-2 md:w-36 md:m-2">
+            <img src="/images/google.webp" alt="" class="w-32 m-2 md:w-36 md:m-2">
+            <img src="/images/verizon.webp" alt="" class="w-32 m-2 md:w-36 md:m-2">
+            <img src="/images/g&e.webp" alt="" class="w-32 m-2 md:w-36 md:m-2">
+            <img src="/images/netflix.webp" alt="" class="w-32 m-2 md:w-36 md:m-2">
+            <img src="/images/unitedhealthcare.webp" alt="" class="w-32 m-2 md:w-36 md:m-2">
+            <img src="/images/roche.webp" alt="" class="w-32 m-2 md:w-36 md:m-2">
+            <img src="/images/p&g.webp" alt="" class="w-32 m-2 md:w-36 md:m-2">
+            <img src="/images/johnson.webp" alt="" class="w-32 m-2 md:w-36 md:m-2">
+            <img src="/images/microsoft.webp" alt="" class="w-32 m-2 md:w-36 md:m-2">
+            <img src="/images/nvidia.webp" alt="" class="w-32 m-2 md:w-36 md:m-2">
+            <img src="/images/samsung.webp" alt="" class="w-32 m-2 md:w-36 md:m-2">
+            <img src="/images/salesforce.webp" alt="" class="hidden w-32 m-2 md:block md:w-36 md:m-2">
+        </div>
+    </section>
+
+    <section class="bg-section-a-bg bg-no-repeat bg-center bg-contain md:pb-36">
+
+        <div class="text-center mt-8 md:text-left md:ml-4 lg:ml-32">
+          <p class="text-2xl font-extrabold mb-2 md:text-3xl">Here's how Scribe works</p>
+          <p class="text-gray-600 text-sm md:text-base">Hint: It’s incredibly easy!</p>  
+        </div>
+        <div class="lg:flex lg:justify-center lg:gap-12 lg:flex-row-reverse lg:mx-40">
+            <div class="flex items-center gap-8 overflow-hidden mx-4 rounded-xl shadow-xl bg-white md:w-4/5 md:mx-auto lg:w-4/5 lg:mx-auto">
+                <div class=" mx-2 mt-16 min-w-full">
+                    <video src="/videos/video-1.mp4" autoplay muted class="w-full aspect-auto border-1 rounded-2xl"></video>
+                </div>
+                <div class="mx-2 mt-16 min-w-full">
+                    <video src="/videos/video-2.mp4" autoplay muted class="w-full aspect-auto border-1 rounded-2xl"></video>
+                </div>
+                <div class="mx-2 mt-16 min-w-full">
+                    <video src="/videos/video-3.mp4" autoplay muted class="w-full aspect-auto border-1 rounded-2xl"></video>
+                </div>
+            </div>
+            <div class="flex gap-4 overflow-scroll mt-8 md:overflow-hidden lg:grid md:flex sm:flex">
+                <a href="#" class="min-w-64 p-4 border-4 border-white border-x-0 border-b-0 hover:bg-cyan-100 focus:border-t-blue-800 active:border-t-blue-800 md:w-3/5 lg:w-4/5">
+                    <p class="text-lg font-medium mb-2">Step 1: Capture any proocess</p>
+                    <p class="text-sm text-gray-700">Turn on the Scribe extension and go through your processs like normal. Your step-by-step guide will be automaticly created!</p>
+                </a>
+                
+                <a href="" class="min-w-64 p-4 border-4 border-white border-x-0 border-b-0 hover:bg-cyan-100 focus:border-t-blue-800 active:border-t-blue-800 md:w-3/5 lg:w-4/5">
+                    <p class="text-lg font-medium mb-2">Step 2: Easily customize</p>
+                    <p class="text-sm text-gray-700">Want to add more detail? Add text screenshots, redact sensitive information and add your company's branding.</p>
+                </a>
+
+                <a href="" class="min-w-64 p-4 border-4 border-white border-x-0 border-b-0 hover:bg-cyan-100 focus:border-t-blue-800 active:border-t-blue-800 md:w-3/5 lg:w-4/5">
+                    <p class="text-lg font-medium mb-2">Step 3: Share with one click</p>
+                    <p class="text-sm text-gray-700">Share with teammates or clients via link, embeded in company wikis and knowledge bases, or export to PDF.</p>
+                </a>
+            </div>
+        </div>
+        <div class="grid">
+            <button class="bg-gradient-to-t from-black to-blue-950 text-white rounded-full shadow-xl py-4 px-8 mx-auto my-16 md:hidden">
+                Get Scribe Free
+            </button>
+        </div>
+
+    </section>
+
+    <section id="section-bg" class="bg-gradient-to-bl from-black via-blue-950 to-indigo-900 py-12 md:">
+
+        <div class="text-white ml-6 md:flex md:gap-10 md:mx-28 lg:mx-48">
+            <img src="/images/qwantel-bg-lg.webp" alt="" class="w-72 rounded-2xl md:z-20 md:w-96">
+            <div class="">
+                <p class="font-medium my-8 mr-8 md:text-xl md:font-semibold md:leading-9">Scribe's been a real game changer for me, no more having to stop and take screenshots while i'm working. The best part? It's all automatic. No more manual documentation for me - that's huge win in my book. </p>
+                <div class="md:flex md:items-center md:justify-between md:mr-16">
+                    <div class="md:mt-6">
+                        <p class="text-sm font-medium md:text-lg md:font-semibold md:mb-2">Qwuantel Mosley</p>
+                        <p class="text-xs font-medium text-slate-300 md:text-sm md:font-semibold">Founder & Business Manager</p>
+                    </div>
+                    <button class="border-[1px] border-slate-500 rounded-full text-white text-sm font-medium px-7 py-3 mt-6">
+                      Read the Case Study
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="bg-footer-bg bg-center bg-no-repeat bg-contain">
+
+        <div class="text-center pt-16">
+            <p class="text-2xl font-semibold mx-6 my-2 md:text-3xl md:font-bold lg:font-extrabold">Create and Share guides the easy way</p>
+            <p class="text-gray-600 text-sm mx-6 md:text-base md:mx-12">Features that'll have you saying "where has this been all my life!?"</p>
+        </div>
+
+        <div class="md:grid md:grid-rows-4 md:grid-cols-2 md:gap-8 md:mx-8 md:-mb-80 lg:grid lg:grid-rows-3 lg:grid-cols-3 lg:gap-8 lg:mx-20 lg:-mb-80">
+            <div>
+                <img src="/images/Thumbnail.webp" alt="" class="w-[95%] mx-auto mt-8 mb-4">
+                <div class="mx-10 mb-10">
+                    <p class="font-semibold mb-2 md:font-bold">Web & desktop process capture</p>
+                    <p class="text-sm text-gray-700">Automatically create how-to guides for any web or desktop based process</p>
+                </div>
+            </div>
+
+            <div>
+                <img src="/images/Thumbnail-1.webp" alt="" class="w-[95%] mx-auto mt-8 mb-4">
+                <div class="mx-10 mb-10">
+                    <p class="font-semibold mb-2 md:font-bold">Automatic step instructions</p>
+                    <p class="text-sm text-gray-700">No more manually typing instructions! Scribe automatically writes how-to guides </p>
+                </div>
+            </div>
+
+            <div>
+                <img src="/images/Thumbnail-2.webp" alt="" class="w-[95%] mx-auto mt-8 mb-4">
+                <div class="mx-10 mb-10">
+                    <p class="font-semibold mb-2 md:font-bold">AI-generated process documents</p>
+                    <p class="text-sm text-gray-700">Use AI to generate SOPs, training manuals and process overviews for any process.</p>
+                </div>
+            </div>
+
+            <div>
+                <img src="/images/feature-icon-4.svg" alt="" class="mt-16 mb-4 ml-9">
+                <div class="mx-10 mb-10">
+                    <p class="font-semibold mb-2 md:font-bold">Sensitive data redaction</p>
+                    <p class="text-sm text-gray-700">Stay complaint by auomatically radacting employee or customer data from screenshots.</p>
+                </div>
+            </div>
+
+            <div>
+                <img src="/images/feature-icon-5.svg" alt="" class="mt-16 mb-4 ml-9">
+                <div class="mx-10 mb-10">
+                    <p class="font-semibold mb-2 md:font-bold">Shareable links & PDF export</p>
+                    <p class="text-sm text-gray-700">Share your guides however you need: via email, embed in your wiki or LMS, or export to PDF.</p>
+                </div>
+            </div>
+
+            <div>
+                <img src="/images/feature-icon-6.svg" alt="" class="mt-16 mb-4 ml-9">
+                <div class="mx-10 mb-10">
+                    <p class="font-semibold mb-2 md:font-bold">Custom Branding</p>
+                    <p class="text-sm text-gray-700">Add your company logo and colors to create on-brand, professional-looking guides .</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid xl:hidden">
+            <button class="bg-gradient-to-t from-black to-blue-950 text-white rounded-full shadow-xl py-4 px-8 mx-auto my-20">
+                Try Scribe for Free!
+            </button>
+        </div>
+
+    </section>
+
+    <section class="bg-section-a-bg bg-center bg-cover">
+
+        <div class="relative text-center mb-12">
+            <p class="text-2xl font-semibold md:text-3xl md:font-bold lg:font-extrabold">Go-to people love Scribe</p>
+        </div>
+2        <div class="md:grid md:grid-rows-6 md:grid-col-2 md:gap-4 md:mx-4 lg:grid lg:grid-rows-3 lg:grid-cols-4 lg:gap-4 lg:mx-16">
+            
+            <div class="bg-white border-2 rounded-2xl shadow-lg py-6 mx-4 md:col-start-1 md:col-end-3 lg:col-start-2 lg:col-end-4">
+               <p class="text-lg font-semibold mx-6 mb-6 md:text-xl">Scribe is helping us solve a problem that's as old as time. We're thrilled with how intuitive and user friendly Scribe is, and we've truly seen the results, both quantitatively and anecdotally.</p>
+               <div class="border-[1px] h-[0.5px] w-full bg-slate-500"></div>
+               <div class="px-6 pt-4 md:flex md:items-center justify-between">
+                   <div class="flex items-center gap-4">
+                       <img src="/images/Test-pete.webp" alt="" class="w-14">
+                       <div>
+                           <p class="font-medium">Pete Cherecwich</p>
+                           <p class="text-gray-500 text-sm">@NorthernTrust</p>
+                       </div>
+                   </div>
+                   <img src="/images/norther-trust.webp" alt="" class="w-32 mt-2">
+               </div>
+            </div>
+    
+            <div class="bg-white border-2 rounded-2xl shadow-lg p-6 m-4 lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3">
+                <p class="text-sm">Extremely easy to share processes with team members without spending time drafting up guides.</p>
+                <div class="flex items-center gap-4 mt-4">
+                    <img src="/images/Test-bryan.webp" alt="" class="w-14">
+                    <div>
+                        <p class="font-medium">Reece Bryan</p>
+                        <p class="text-gray-500 text-sm">G2 reviewer</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="bg-white border-2 rounded-2xl shadow-lg p-6 m-4 md:col-start-1 md:col-end-2 lg:col-start-2 lg:col-end-3 lg:row-start-3 lg:row-end-4">
+                <p class="text-sm">Shoutout to @ScribeHow for making User Manual creations a breeze. Plenty of hours saved in creating How-to Guides and User Manuals in last 2 working days!</p>
+                <div class="flex items-center gap-4 mt-4">
+                    <img src="/images/Test-vivek.webp" alt="" class="w-14">
+                    <div>
+                        <p class="font-medium">Vivek Agrawal</p>
+                        <p class="text-gray-500 text-sm">@Vivek1402</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="bg-white border-2 rounded-2xl shadow-lg p-6 m-4 md:col-start-2 md:col-end-3 md:row-start-2 md:row-end-3 lg:col-start-3 lg:col-end-4 lg:row-start-2 lg:row-end-3">
+                <p class="text-sm">@ScribeHow has helped our team at @RZeroSystems scale from 30 to 200 employees and 50 to 300 customers over the past year.</p>
+                <div class="flex items-center gap-4 mt-4">
+                    <img src="/images/Test-grant.webp" alt="" class="w-14">
+                    <div>
+                        <p class="font-medium">Grant Morgan</p>
+                        <p class="text-gray-500 text-sm">@GrantMorgan_</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="bg-white border-2 rounded-2xl shadow-lg p-6 m-4 lg:col-start-3 lg:col-end-4 lg:row-start-3 lg:row-end-4">
+                <p class="text-sm">I can make a tutorial for team members in minutes. The process is no fuss and simplified and features all the tools I need to work effectively.</p>
+                <div class="flex items-center gap-4 mt-4">
+                    <img src="/images/Test-carla.webp" alt="" class="w-14">
+                    <div>
+                        <p class="font-medium">Carla Ryan</p>
+                        <p class="text-gray-500 text-sm">G2 reviewer</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="bg-white border-2 rounded-2xl shadow-lg p-6 m-4 lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2 lg:row-span-2">
+                <p class="text-sm">The best thing since sliced bread! The ability to build visual guides/step-by-step tutorials with very little effort or hassle.</p>
+                <div class="flex items-center gap-4 mt-4">
+                    <img src="/images/Test-seth.webp" alt="" class="w-14">
+                    <div>
+                        <p class="font-medium">Seth M. List</p>
+                        <p class="text-gray-500 text-sm">G2 reviewer</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="bg-white border-2 rounded-2xl shadow-lg p-6 m-4 hidden md:block">
+                <p class="text-sm">@ScribeHow has completely changed how I document and educate remote colleagues. I can create a walkthrough in 54 seconds.</p>
+                <div class="flex items-center gap-4 mt-4">
+                    <img src="/images/Test-naomi.webp" alt="" class="w-14">
+                    <div>
+                        <p class="font-medium">Naomi West</p>
+                        <p class="text-gray-500 text-sm">@emailfromnaomi</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="bg-white border-2 rounded-2xl shadow-lg p-6 m-4">
+                <p class="text-sm">S/O to @ScribeHow for making it so easy to create guides! Churned out three for my team in the last half hour.</p>
+                <div class="flex items-center gap-4 mt-4">
+                    <img src="/images/Test_diana.webp" alt="" class="w-14">
+                    <div>
+                        <p class="font-medium">Diana</p>
+                        <p class="text-gray-500 text-sm">@dianalogs</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="bg-white border-2 rounded-2xl shadow-lg p-6 m-4 hidden md:block">
+                <p>This app @ScribeHow creates "how to" docs for you. You just do the thing & it turns it into screen shots & a step by step guide.</p>
+                <div class="flex items-center gap-4 mt-4">
+                    <img src="/images/Test-christiana.webp" alt="" class="w-14">
+                    <div>
+                        <p class="font-medium">Christina Poulton</p>
+                        <p class="text-gray-500 text-sm">@ChristinaPoult</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="bg-white border-2 rounded-2xl shadow-lg p-6 m-4 ">
+                <p>I don’t think I have ever tried a product for less than 5 minutes before purchasing… until now. It is that good.</p>
+                <div class="flex items-center gap-4 mt-4">
+                    <img src="/images/Test-steve.webp" alt="" class="w-14">
+                    <div>
+                        <p class="font-medium">Steve Greenberg</p>
+                        <p class="text-gray-500 text-sm">@spgreenberg</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="bg-white border-2 rounded-2xl shadow-lg p-6 m-4 hidden md:block">
+                <p>This tool has made my transition to a Marketing Director so much easier. I have so much peace of mind knowing I can leave such detailed, visual how-to guides to my staff for training and in my absence.</p>
+                <div class="flex items-center gap-4 mt-4">
+                    <img src="/images/Test-cheska.webp" alt="" class="w-14">
+                    <div>
+                        <p class="font-medium">Cheska</p>
+                        <p class="text-gray-500 text-sm">
+                            @lochnesscheska</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-end gap-4 mt-24 overflow-scroll md:flex md:items-center md:justify-center md:gap-14 md:overflow-hidden">
+            <img src="/images/badge-leader-w.webp" alt="" class="w-10 opacity-50 md:w-12">
+            <img src="/images/badge-leader-w.webp" alt="" class="w-12 opacity-75 md:w-16">
+            <img src="/images/badge-highperformer-w.webp" alt="" class="w-16 md:w-24">
+            <img src="/images/badge-Easiest-To-Do-Business-with-w.webp" alt="" class="w-16 md:w-24">
+            <img src="/images/badge-bestsupport-1.webp" alt="" class="w-16 md:w-24">
+            <img src="/images/badge-highperformer-s.webp" alt="" class="w-16 md:w-24">
+            <img src="/images/badge-momentum-s.webp" alt="" class="w-16 md:w-24">
+            <img src="/images/badge-leader-s.webp" alt="" class="w-16 md:w-24">
+            <img src="/images/badge-placeholder.svg" alt="" class="w-16 md:w-24">
+        </div>
+
+    </section>
+
+    <section class="text-center pt-28 pb-8 px-4">
+
+        <div class="text-center mt-8 md:text-left md:ml-4 lg:ml-32">
+            <p class="text-2xl font-semibold pb-3 md:text-3xl md:font-bold">What's the Scribe impact?</p>
+            <p class="text-gray-600 text-sm pb-6 md:text-base">Scribe will save your team hours of work (and lots of headaches) every week</p>
+        </div>
+
+        <div class="sm:flex sm:items-center sm:justify-center sm:gap-4 md:gap-6 md:mx-8 md:mt-12 lg:gap-12 lg:mx-32 lg:mt-16">
+            <div class="bg-footer-bg bg-no-repeat bg-cover bg-bottom border-[1px] rounded-xl px-6 py-8 mb-4 sm:w-2/5 md:p-20 md:bg-center">
+                <p class="text-5xl font-extrabold bg-gradient-to-r from-blue-700 to-pink-700 inline-block text-transparent bg-clip-text pb-8 md:text-6xl lg:text-7xl">15x</p>
+                <div class="md:text-left md:-mx-10 md:-mb-10 md:pt-8 lg:mt-9">
+                    <p class="font-semibold pb-2 md:font-semibold md:text-lg">Save time</p>
+                    <p class="text-gray-500">Document your processes 15x faster.</p>
+                </div>
+            </div>
+            <div class="bg-footer-bg bg-no-repeat bg-cover bg-bottom border-[1px] rounded-xl px-6 py-8 mb-4 sm:w-2/5 md:p-20">
+                <p class="text-5xl font-extrabold bg-gradient-to-r from-blue-700 to-pink-700 inline-block text-transparent bg-clip-text pb-8 md:text-6xl lg:text-7xl">67%</p>
+                <div class="md:text-left md:-mx-10 md:-mb-10 md:pt-8 lg:mt-6">
+                    <p class="font-semibold pb-2 md:font-semibold md:text-lg">Get answers faster</p>
+                    <p class="text-gray-500">Find answers to your questions 67% faster.</p>
+                </div>
+            </div>
+            <div class="bg-footer-bg bg-no-repeat bg-cover bg-bottom border-[1px] rounded-xl px-6 py-8 sm:w-2/5 md:p-20">
+                <p class="text-5xl font-extrabold bg-gradient-to-r from-blue-700 to-pink-700 inline-block text-transparent bg-clip-text pb-8 md:text-6xl lg:text-7xl">25%</p>
+                <div class="md:text-left md:-mx-10 md:-mb-10 md:pt-8 lg:mt-6">
+                    <p class="font-semibold pb-2 md:font-semibold md:text-lg">Increase productivity</p>
+                    <p class="text-gray-500">Boost your team's productivity by 25%.</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-2xl font-semibold mt-16 mb-4 pb-3 md:text-3xl md:font-bold md:mt-24 lg:text-4xl lg:font-extrabold lg:mt-28">Ready to try Scribe?</p>
+        <p class="text-gray-500 mx-2 sm:mx-8 md:mx-24 md:text-lg lg:mx-60 lg:text-xl">Scribe automatically generates how-to guides and serves them to your team when they need them most. Save time, stay focused, help others.</p>
+        <button class="bg-gradient-to-t from-black to-blue-950 text-white rounded-full shadow-xl py-4 px-7 mx-auto my-16 md:my-24"><img src="/images/icon-chrome.png" alt="">
+            Get Scribe for Chrome
+        </button>
+    </section>
+        
+    <footer class="md:flex md:items-baseline">
+
+        <div class="md:flex md:items-baseline md:gap-10">
+            <div class="flex items-center gap-20 md:flex-none">
+                <div class="text-white">
+                    <p class="text-lg font-semibold pb-4">Product</p>
+                    <li class="list-none py-1 text-gray-300"><a href="">Scribe</a></li>
+                    <li class="list-none py-1 text-gray-300"><a href="">Scribe Gallery</a></li>
+                    <li class="list-none py-1 text-gray-300"><a href="">Security</a></li>
+                    <li class="list-none py-1 text-gray-300"><a href="">Explore</a></li>
+                    <li class="list-none py-1 text-gray-300"><a href="">Help Center</a></li>
+                    <li class="list-none py-1 text-gray-300"><a href="">What's New</a></li>
+                    <li class="list-none py-1 text-gray-300"><a href="">Resources</a></li>
+                    <li class="list-none py-1 text-gray-300"><a href="">Tools</a></li>
+                </div>
+                <div class="text-white">
+                    <p class="text-lg font-semibold pb-4">Company</p>
+                    <li class="list-none py-1 text-gray-300"><a href="">About Us </a></li>
+                    <li class="list-none py-1 text-gray-300"><a href="">Careers</a></li>
+                    <button class="bg-yellow-600 text-black rounded-full px-3">We're Hiring!</button>
+                    <li class="list-none py-1 text-gray-300"><a href="">Contact Sales</a></li>
+                    <li class="list-none py-1 text-gray-300"><a href="">Support</a></li>
+                    <li class="list-none py-1 text-gray-300"><a href="">Blog</a></li>
+                    <li class="list-none py-1 text-gray-300"><a href="">Affiliates</a></li>
+                    <li class="list-none py-1 text-gray-300"><a href="">Status</a></li>
+                </div>
+            </div>
+            <div class="text-white mt-10">
+                <p class="text-lg font-semibold pb-4">Legal</p>
+                <li class="list-none py-1 text-gray-300"><a href="">Terms</a></li>
+                <li class="list-none py-1 text-gray-300"><a href="">Privacy</a></li>
+                <li class="list-none py-1 text-gray-300"><a href="">Cookies</a></li>
+                <li class="list-none py-1 text-gray-300"><a href="">DPA</a></li>
+            <div>
+        </div>
+
+        
+        <div class="flex gap-6 md:flex-none">
+            <div class="text-white">
+                <img src="/images/footer-logo.svg" alt="" class="my-8">
+                <p class="text-xs leading-5 mb-6">&copy 2024 Stanley Meruo - All rights reserved.</p>
+                <img src="/images/soc-2-badge.png" alt="" class="w-14">
+            </div>
+            <div>
+                <button class="list-none text-white border-[1px] border-white rounded-full p-2 mt-8 mb-6"><a href="meruostanleovic86@gmail.com">meruostanley@gmail.com</a></button>
+                <div class="flex items-center gap-4">
+                    <img src="/images/icon-twitter.svg" alt="">
+                    <img src="/images/icon-instagram.svg" alt="">
+                    <img src="/images/icon-tiktok.svg" alt="">
+                    <img src="/images/icon-youtube.svg" alt="">
+                </div>
+            </div>
+        </div>
+        
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

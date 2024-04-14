@@ -1,0 +1,11 @@
+<svg width="505" height="341" viewBox="0 0 505 341" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Blob top">
+<path d="M1.54765e-05 211.453C8.05147e-06 126.521 116.713 1.39377e-05 239.621 3.19283e-06C362.528 -7.55204e-06 489.891 17.8135 503.79 132.425C518.697 255.351 393.853 410.092 239.621 307.569C85.3882 205.046 2.29016e-05 296.386 1.54765e-05 211.453Z" fill="url(#paint0_linear_1409_1856)" style="mix-blend-mode:overlay"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_1409_1856" x1="295.547" y1="303.573" x2="262.826" y2="52.5984" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F45397"/>
+<stop offset="1" stop-color="#FFB525"/>
+</linearGradient>
+</defs>
+</svg>
